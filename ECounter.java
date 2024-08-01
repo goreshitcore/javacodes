@@ -14,9 +14,7 @@ public class ECounter {
 	            }
 	        }
 
-	        System.out.println("The phrase entered: " + message);
-	        System.out.println("Number of 'e's found: " + counter);
-		
+	        System.out.println("The phrase entered: '"+ message+"' contains "+counter+" 'e's.");		
 		
 	}
 }
