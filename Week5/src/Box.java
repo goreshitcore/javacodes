@@ -9,29 +9,13 @@ public class Box {
         this.depth = depth;
     }
 
-    public int getHeight() {
-        return height;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public int getDepth() {
-        return depth;
+    public boolean fits(Box box) {
+        return height > box.height && width > box.width && depth > box.depth;
     }
 
     @Override
     public String toString() {
         return "height = " + height + "\nwidth = " + width + "\ndepth = " + depth;
-    }
-
-    public boolean fits(Box box) {
-        return height > box.height && width > box.width && depth > box.depth;
-    }
-
-    public boolean fits(Box box1, Box box2) {
-        return fits(box1) && box1.fits(box2);
     }
 
     public static void main(String[] args) {
@@ -41,6 +25,6 @@ public class Box {
         System.out.println(box2.toString());
         Box box3 = new Box(31, 41, 51);
         System.out.println(box3.toString());
-        System.out.println("fits = " + box1.fits(box2, box3));
+        System.out.println("fits = " + box1.fits(box2) && box2.fits(box3));
     }
 }
