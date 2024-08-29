@@ -11,12 +11,16 @@ public class SubtractLoop {
         System.out.print("Enter the number to subtract by: ");
         input = scanner.nextDouble();
 
+        System.out.println(startNumber + " - " + input + " = " + (temp - input ));
         while (temp > 0) {
             temp -= input;
             counter++;
-            System.out.printf("%.1f - %.1f = %.1f%n", startNumber, input, temp);
-        }
 
-        System.out.printf("%.1f was subtracted %d times from %.1f%n", input, counter, startNumber);
+        }
+        if(temp <= 0) {
+            System.out.println(input + " was subtracted " + counter + " times from " + startNumber);
+        }else{
+            System.out.println(temp + " - " + input + " = " (temp-input));
+        }
     }
 }
